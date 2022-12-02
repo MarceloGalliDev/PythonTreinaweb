@@ -1,4 +1,6 @@
 from animal import Animal
+from interface_animal import InterfaceAnimal
+from dono import Dono
 
 class Cachorro():
     idade = 4
@@ -56,3 +58,25 @@ class Cachorro_4(Animal):
     
     def fazer_barulho(self):
         return "au au"
+
+class Cachorro_5(Animal, InterfaceAnimal):
+    def __init__(self, nome, idade, cor, qtd_bolinhas, dono=Dono()):
+        super().__init__(nome, idade, cor)
+        self.__qtd_bolinhas = qtd_bolinhas
+        self.__dono = dono
+        
+    @property
+    def qtd_bolinhas(self):
+        return self.qtd_bolinhas
+
+    @qtd_bolinhas.setter
+    def qtd_bolinhas(self, qtd_bolinhas):
+        self.__qtd_bolinhas = qtd_bolinhas
+        
+    @property
+    def dono(self):
+        return self.dono
+
+    @dono.setter
+    def dono(self, dono):
+        self.__dono = dono

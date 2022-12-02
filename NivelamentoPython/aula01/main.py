@@ -1,5 +1,6 @@
 from cachorro import Cachorro, Cachorro_2, Cachorro_3;
 from gato import Gato;
+from dono import Dono
 
 #classe
 cachorro = Cachorro()
@@ -25,6 +26,14 @@ print(cachorro_3.nome)
 print(cachorro_3.idade)
 print(cachorro_3.cor)
 print(cachorro_3.qtd_bolinhas)#estamos acessando a property
+
+#acessando um objeto dentro de uma classe atrelada a uma outra classe
+cachorro_4 = Cachorro_3(10, "Branco", "tete", 4, dono=Dono('jose'))
+print(cachorro_3.nome)
+print(cachorro_3.idade)
+print(cachorro_3.cor)
+print(cachorro_3.qtd_bolinhas)#estamos acessando a property
+print(cachorro.dono.nome)
 
 
 #caso eu queira acessar um encapsulamento privado
