@@ -80,3 +80,6 @@ class Cachorro_5(Animal, InterfaceAnimal):
     @dono.setter
     def dono(self, dono):
         self.__dono = dono
+        
+    def fazer_barulho(self):
+        return "au au"
